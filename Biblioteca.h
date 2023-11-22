@@ -1,3 +1,6 @@
+#ifndef BIBLIOTECA_H
+#define BIBLIOTECA_H
+
 #include <iostream>
 #include <string>
 
@@ -6,7 +9,7 @@ using namespace std;
 class Biblioteca{
 
 
-    //Atributos da classe m√£e
+    //Atributos da classe m„e
     protected:
         string titulo;
         string autor;
@@ -30,6 +33,9 @@ class Biblioteca{
         void setTitulo(string titulo);
         void setAutor(string autor);
         void setAno(int ano);
-
+        virtual void imprimirBiblioteca();
 
 };
+
+		
+#endif

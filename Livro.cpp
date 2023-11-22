@@ -1,19 +1,20 @@
 #include "Livro.h"
-//Colocar essa condiÃ§Ã£o em todo .cpp
-
-#ifndef LIVRO_H
-#define LIVRO_H
-
-    Livro::Livro(string titulo, string autor, int ano, string editora, string isbn, int paginas, string edicao){
-    }
-
-    Livro::~Livro(){
-    }
+//Colocar essa condição em todo .cpp
 
 
+	Livro::Livro(string titulo, string autor, int ano, string editoraLivro, string isbn, int paginas, string edicao) : Biblioteca(titulo, autor, ano){
 
-    string Livro::getEditora(){
-        return editora;
+	}		
+	
+	Livro::Livro(){
+	}
+	Livro::~Livro(){
+	}
+
+
+
+    string Livro::getEditoraLivro(){
+        return editoraLivro;
     }
     string Livro::getIsbn(){
         return isbn;
@@ -25,8 +26,8 @@
         return edicao;
     }
 
-    void Livro::setEditora(string editora){
-        this->editora = editora;
+    void Livro::setEditoraLivro(string editoraLivro){
+        this->editoraLivro = editoraLivro;
     }
     void Livro::setIsbn(string isbn){
         this->isbn = isbn;
@@ -38,6 +39,13 @@
         this->edicao = edicao;
     }
 
+	void Livro::imprimirLivro(){
+		Biblioteca::imprimirBiblioteca();
+		
+		cout << "Editora: " << getEditoraLivro() << endl;
+		cout << "ISBN: " << getIsbn() << endl;
+		cout << "Paginas: " << getPaginas() << endl;
+		cout << "Edicao: " << getEdicao() << endl;
+	}
 
 
-#endif

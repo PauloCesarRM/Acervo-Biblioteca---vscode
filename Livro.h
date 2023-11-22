@@ -1,36 +1,38 @@
-#include "Biblioteca.h"
+#ifndef LIVRO_H
+#define LIVRO_H
 
-#include <iostream>
-#include <string>
+#include "Biblioteca.h"	//SEM COMENTAR DA ERRO
 
-using namespace std;
 
-class Livro : public Biblioteca{
+	class Livro : public Biblioteca{
 
 
     //Atributos da classe Livro
     protected:
-    string editora;
-    string isbn;
-    int paginas;
-    string edicao;
+	    string editoraLivro;
+	    string isbn;
+	    int paginas;
+	    string edicao;
 
 
         public:
-        //construtor e destrutor
-        Livro(string titulo, string autor, int ano, string editora, string isbn, int paginas, string edicao);
+		//construtor e destrutor
+        Livro(string titulo, string autor, int ano, string editoraLivro, string isbn, int paginas, string edicao);
         Livro();
         ~Livro();
         
 
-        string getEditora();
+        string getEditoraLivro();
         string getIsbn();
         int getPaginas();
         string getEdicao();
 
-        void setEditora(string editora);
+        void setEditoraLivro(string editoraLivro);
         void setIsbn(string isbn);
         void setPaginas(int paginas);
         void setEdicao(string edicao);
+        
+        void imprimirLivro();
 
 };
+#endif

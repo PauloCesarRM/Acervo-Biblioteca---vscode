@@ -1,17 +1,14 @@
 #include "Biblioteca.h"
-//Colocar essa condiÃ§Ã£o em todo .cpp
+//Colocar essa condição em todo .cpp
 
-#ifndef BIBLIOTECA_H
-#define BIBLIOTECA_H
 
     Biblioteca::Biblioteca(string titulo, string autor, int ano){
-
     }
-    Biblioteca::Biblioteca(){
-
+    Biblioteca::Biblioteca()
+	{
     }
+    
     Biblioteca::~Biblioteca(){
-
     }
 
 
@@ -40,5 +37,9 @@
         this->ano = ano;
     }
 
+	void Biblioteca::imprimirBiblioteca(){
+	        cout << "Titulo: " << getTitulo() << endl;
+	        cout << "Autor: " << getAutor() << endl;
+	        cout << "Ano de publicacao: " << getAno() << endl;
+    }	
 
-#endif
